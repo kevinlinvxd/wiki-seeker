@@ -23,6 +23,15 @@ function App() {
     setResults(json.query.search)
     setSearchInfo(json.query.searchinfo)
   }
+
+  const nextPage = async e => {
+    alert("I will eventually make a next 20 results page")
+  }
+
+  const prevPage = async e => {
+    alert("I will eventually make a previous 20 results page")
+  }
+
   return (
     <div className="App">
       <header>
@@ -41,6 +50,14 @@ function App() {
           ""
         )}
       </header>
+      <div className="Buttons">
+        <button className="prevButton" onClick={prevPage}>
+          Prev
+        </button>
+        <button className="Nextbutton" onClick={nextPage}>
+          Next
+        </button>
+      </div>
       <div className="results">
         {results.map((result, i) => {
           const url = `https://en.wikipedia.org/?curid=${result.pageid}`
