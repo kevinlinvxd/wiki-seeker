@@ -54,7 +54,7 @@ function App() {
         <button className="prevButton" onClick={prevPage}>
           Prev
         </button>
-        <button className="Nextbutton" onClick={nextPage}>
+        <button className="nextButton" onClick={nextPage}>
           Next
         </button>
       </div>
